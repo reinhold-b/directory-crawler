@@ -13,9 +13,9 @@ def countLines(filePath):
 
 
 def count(dirPath):
-    print("Counting...depending on the size of the directory, you will have to wait a bit")
     _sum = 0
     for file in os.listdir(dirPath):
+        print(file)
         path = os.path.join(dirPath, file)
         if os.path.isfile(path):
             try:
@@ -34,8 +34,9 @@ def main():
     root = Tk()
     _dir = filedialog.askdirectory(
         initialdir="/", title="Select dir")
+    print("Counting...depending on the size of the directory, you will have to wait a bit")
     _sum = count(_dir)
-    print(_dir + ": " + str(_sum))
+    print("\n\n\n" + _dir + ": " + str(_sum))
     root.destroy()
     time.sleep(1000)
 
