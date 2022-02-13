@@ -13,6 +13,7 @@ def countLines(filePath):
 
 
 def count(dirPath):
+    print("Counting...depending on the size of the directory, you will have to wait a bit")
     _sum = 0
     for file in os.listdir(dirPath):
         path = os.path.join(dirPath, file)
